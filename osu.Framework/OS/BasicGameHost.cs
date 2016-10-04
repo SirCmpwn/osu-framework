@@ -31,6 +31,8 @@ namespace osu.Framework.OS
         public event Func<bool> ExitRequested;
         public event Action Exited;
 
+        public virtual BasicStorage Storage { get; protected set; }
+
         public override bool IsVisible => true;
 
         private static Thread updateThread;

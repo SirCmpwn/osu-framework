@@ -71,6 +71,9 @@
     <Compile Include="OS\Windows\WindowsGameHost.cs" />
     <Compile Include="OS\Windows\WindowsGameWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OS\DesktopStorage.cs" />
+    <Compile Include="OS\Windows\WindowsStorage.cs" />
+    <Compile Include="OS\Linux\LinuxStorage.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\osu.Framework\osu.Framework.csproj">

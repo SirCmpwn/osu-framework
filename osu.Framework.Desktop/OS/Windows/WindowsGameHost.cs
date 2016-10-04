@@ -23,7 +23,7 @@ namespace osu.Framework.Desktop.OS.Windows
 
         private TimePeriod timePeriod;
 
-        internal WindowsGameHost(GraphicsContextFlags flags)
+        internal WindowsGameHost(GraphicsContextFlags flags, string game)
         {
             timePeriod = new TimePeriod(1)
             {
@@ -32,6 +32,8 @@ namespace osu.Framework.Desktop.OS.Windows
 
             Architecture.SetIncludePath();
             window = new WindowsGameWindow(flags);
+
+            Storage = new WindowsStorage(game);
 
             Application.EnableVisualStyles();
 

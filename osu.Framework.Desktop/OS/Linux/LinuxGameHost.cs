@@ -16,9 +16,11 @@ namespace osu.Framework.Desktop.OS.Linux
 
         private LinuxGameWindow window;
 
-        internal LinuxGameHost(GraphicsContextFlags flags)
+        internal LinuxGameHost(GraphicsContextFlags flags, string game)
         {
             window = new LinuxGameWindow(flags);
+
+            Storage = new LinuxStorage(game);
 
             Window = window;
             Window.Activated += OnActivated;
