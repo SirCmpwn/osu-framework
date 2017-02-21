@@ -493,7 +493,7 @@ namespace osu.Framework.Input
             if (stillValid)
             {
                 //ensure we are visible
-                IContainer d = FocusedDrawable.Parent;
+                IControl d = FocusedDrawable.Parent;
                 while (d != null)
                 {
                     if (!d.IsPresent)

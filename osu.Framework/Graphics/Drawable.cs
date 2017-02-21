@@ -484,7 +484,7 @@ namespace osu.Framework.Graphics
                     return;
 
                 bypassAutoSizeAxes = value;
-                Parent?.InvalidateFromChild(Invalidation.Geometry, this);
+                (Parent as IContainer)?.InvalidateFromChild(Invalidation.Geometry, this);
             }
         }
 
@@ -861,8 +861,8 @@ namespace osu.Framework.Graphics
 
         #region Parenting (scene graph operations, including ProxyDrawable)
 
-        private IContainer parent;
-        public IContainer Parent
+        private IControl parent;
+        public IControl Parent
         {
             get { return parent; }
             set
@@ -1036,7 +1036,7 @@ namespace osu.Framework.Graphics
                 return false;
 
             if (shallPropagate && Parent != null && source != Parent)
-                Parent.InvalidateFromChild(invalidation, this);
+                (Parent as IContainer)?.InvalidateFromChild(invalidation, this);
 
             bool alreadyInvalidated = true;
 

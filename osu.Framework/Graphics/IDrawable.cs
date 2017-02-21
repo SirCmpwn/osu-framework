@@ -14,7 +14,7 @@ namespace osu.Framework.Graphics
 
         DrawInfo DrawInfo { get; }
 
-        IContainer Parent { get; set; }
+        IControl Parent { get; set; }
 
         /// <summary>
         /// Whether this drawable is present for any sort of user-interaction.

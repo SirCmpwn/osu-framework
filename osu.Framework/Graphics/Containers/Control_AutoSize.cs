@@ -10,7 +10,7 @@ using osu.Framework.Graphics.Transformations;
 
 namespace osu.Framework.Graphics.Containers
 {
-    public partial class Container<T>
+    public partial class Control<T>
     {
         internal event Action OnAutoSize;
 
